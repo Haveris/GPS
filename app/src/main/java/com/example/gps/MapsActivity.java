@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.location.LocationRequest;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -35,13 +36,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     //references to the UI elements
     Button detailsButton, distanceButton;
 
+    //Location request
+    LocationRequest locationRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        detailsButton = findViewById(R.id.detailsButton);
-        distanceButton = findViewById(R.id.distanceButton );
+
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -50,6 +52,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
 
     }
 

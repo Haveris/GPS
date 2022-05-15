@@ -2,42 +2,134 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <fragment
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="606dp" />
 
-    <Button
-        android:id="@+id/detailsButton"
+    <TextView
+        android:id="@+id/tv_labeladdress"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Address:" />
+
+    <TextView
+        android:id="@+id/tv_labelspeed"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_labeladdress"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Speed:" />
+
+    <TextView
+        android:id="@+id/tv_labelaccuracy"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_labelspeed"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Accuracy:" />
+
+    <TextView
+        android:id="@+id/tv_labelaltitude"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_labelaccuracy"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Altitude:" />
+
+    <TextView
+        android:id="@+id/tv_labellon"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_labelaltitude"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Longitude:" />
+
+    <TextView
+        android:id="@+id/tv_labellat"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_labellon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Latitude:" />
+
+    <TextView
+        android:id="@+id/tv_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="20dp"
-        android:background="#359c5e"
-        android:padding="8dp"
-        android:text="details"
-        android:textColor="#ffffff" />
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@+id/tv_labeladdress"
+        android:text="string" />
 
-    <Button
-        android:id="@+id/distanceButton"
-        android:layout_width="137dp"
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="20dp"
-        android:layout_toEndOf="@+id/detailsButton"
-        android:background="#359c5e"
-        android:padding="8dp"
-        android:text="distance"
-        android:textColor="#ffffff" />
+        android:layout_above="@+id/tv_address"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tv_labelspeed"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/tv_accuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_speed"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tv_labelaccuracy"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/tv_altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_accuracy"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tv_labelaltitude"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/tv_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_altitude"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tv_labellon"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/tv_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_longitude"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tv_labellat"
+        android:text="0.00" />
+
 
 </RelativeLayout>
