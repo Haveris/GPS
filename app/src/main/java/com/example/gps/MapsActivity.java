@@ -18,6 +18,8 @@ import android.location.LocationManager;
 import android.location.LocationRequest;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -34,15 +36,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ActivityMapsBinding binding;
 
     //references to the UI elements
-    Button detailsButton, distanceButton;
+    TextView tv_lat, tv_lon, tv_altitude, tv_accuracy, tv_speed, tv_address;
 
-    //Location request
-    LocationRequest locationRequest;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //UI variable value
+        tv_lat = findViewById(R.id.tv_latitude);
+        tv_lon = findViewById(R.id.tv_longitude);
+        tv_altitude = findViewById(R.id.tv_altitude);
+        tv_accuracy = findViewById(R.id.tv_accuracy);
+        tv_speed = findViewById(R.id.tv_speed);
+        tv_address = findViewById(R.id.tv_address);
 
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
